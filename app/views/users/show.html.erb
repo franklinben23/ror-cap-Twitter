@@ -1,0 +1,21 @@
+<div>
+  <div>
+    <div>
+      <image class="cover-image"<%= image_tag display_cover(@user) %>
+    </div>
+
+    <% unless @user.id == current_user.id && current_user.followed_users.include?(@user) %>
+      <div class= "follow-btn">
+        <%= displayfollow(_user, @user) %> 
+      </div>
+    <% end %>
+    <h3>See <u>@<%= @user.username %></u> thoughts:</h3><br>
+
+  <ul>
+    <% @user_tweets.each do | tweet | %>
+      <li><%= tweet.body %> <br> 
+      <small>Tweeted at <%= tweet.created_at %></small></li><br>
+    <% end %>
+  </ul>
+  </div>
+</div>

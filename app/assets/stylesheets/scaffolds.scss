@@ -1,26 +1,61 @@
 @import "font-awesome";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
+  background-color: white;
+  //display: flex;
 }
 
 body {
-  background-color: #fff;
+  //justify-self: center;
+  background-color: whitesmoke;
   color: #333;
   //margin: 0 40px 0 40px;
   box-sizing: border-box;
-  min-height: 100%;
-}
-.conti {
+  //min-height: 100%;
   min-height: 100vh;
+  //max-width: 400px;
+  display: flex;
+  width: 77.5%;
+  margin: auto;
+}
+/*.conti {
+  min-height: 100vh;
+}*/
+
+.sidebar-nav {
+  width: 27%;
+  color: #eee;
 }
 
-.backgi {
-  background-color: rgb(11, 2, 65);
+.navbar {
+  background-color: dodgerblue;
 }
+
+.fa-twitter {
+  margin-left: 20px;
+}
+
+.navbar-elements {
+  margin-right: 20px;
+}
+
+.element {
+  padding: 0 5px 0 5px;
+}
+
+/*.backgi {
+  background-color: 0e52;
+}*/
 
 .blueback {
-  background-color: blue;
+  background-color: midnightblue;
 }
 
 body,

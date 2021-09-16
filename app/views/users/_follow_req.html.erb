@@ -1,0 +1,12 @@
+<span>
+  <%= form_with(model: follow, class: "forma") do |form| %>
+    <div class="field">
+      <%= form.hidden_field :follower_id, value: current_user.id %>
+      <%= form.hidden_field :followee_id, value: user.id %>
+    </div>
+
+    <div class="actions btn-follow">
+      <%= form.submit "Follow" %>
+    </div>
+  <% end %>
+</span>

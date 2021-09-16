@@ -2,28 +2,23 @@
 
 <h1>Tweets</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.body %></td>
-        <td><%= tweet.user_id %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<% @tweets.each do |tweet| %>
+  <div class= "pic-and-body">
+    <div class = "pic-and-names">
+      <div class= "pic">
+        <%= image_tag display_photo(tweet.user), class: "tweet-pic" %>
+      </div>
+      <div class= "names">
+        <p class= "username-n"> <% tweet.user.username %> </p>
+        <p class= "fullname-n"> <% tweet.user.fullname %> </p>
+      </div>
+    </div>
+    <% link_to tweet_path(tweet) %>
+      <div class= "body">
+        <%= tweet.body %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+<% end %>
 
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+<%= link_to 'New Tweet', new_tweet_path, class: "new_tweet_btn" %>

@@ -31,6 +31,16 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cover %><br />
+    <%= f.file_field :coverimage %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
