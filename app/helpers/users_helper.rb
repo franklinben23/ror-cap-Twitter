@@ -25,7 +25,7 @@ module UsersHelper
     out += if current_user.followees.include?(@user)
              "<div class= "follow-btn"> <%= render 'follow_req', follow: @follow, user: 1user %> </div>"
            else
-             "<h5 class='btn'>#{button_to 'unFollow', follow_path, method: 'DELETE'}</h5>"
+             "<h5 class='btn'>#{button_to 'unFollow', unfollow_path, method: 'DELETE'}</h5>"
            end
     out.html_safe
   end
