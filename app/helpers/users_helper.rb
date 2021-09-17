@@ -1,5 +1,4 @@
 module UsersHelper
-
   def display_photo(user = nil)
     if user.nil? || user.photo.nil? || !user.photo.attached?
       'default-photo.png'

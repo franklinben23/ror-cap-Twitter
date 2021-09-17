@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @users = User.all.order(created_at: :desc)
     @user = User.new
@@ -12,5 +11,4 @@ class UsersController < ApplicationController
     @user_tweets = @user.tweets.ordered_by_latest
     @follow = Follow.new
   end
-
 end
