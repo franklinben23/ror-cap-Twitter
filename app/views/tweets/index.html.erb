@@ -1,20 +1,19 @@
 
 
-<h1>Tweets</h1>
+<h1 class= "index-title">Tweets</h1>
 
 <% @tweets.each do |tweet| %>
-  <div class= "pic-and-body">
-    <div class = "pic-and-names">
+  <div class= "pic-and-body d-flex align-content-center w-100">
+    <div class = "pic-and-names d-flex justify-content-center align-content-center">
       <div class= "pic">
         <%= image_tag display_photo(tweet.user), class: "tweet-pic" %>
       </div>
-      <div class= "names">
-        <p class= "username-n"> <% tweet.user.username %> </p>
-        <p class= "fullname-n"> <% tweet.user.fullname %> </p>
+      <div class= "names d-flex">
+        <p class= "username-n"><bold> <%= tweet.user.username %></bold> </p>
       </div>
     </div>
     <%= link_to tweet_path(tweet) do %>
-      <div class= "body">
+      <div class= "tweet-body">
         <%= tweet.body %>
       </div>
     <% end %>
