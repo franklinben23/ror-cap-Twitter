@@ -4,4 +4,6 @@ class Tweet < ApplicationRecord
 
   belongs_to :user
   has_many :likes, dependent: :destroy
+
+  scope :ordered_by_latest, -> { order(created_at: :desc) }
 end

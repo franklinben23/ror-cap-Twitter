@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_tweets = @user.tweets.ordered_by_most_recent
+    @user_tweets = @user.tweets.ordered_by_latest
     @follow = Follow.new
   end
 

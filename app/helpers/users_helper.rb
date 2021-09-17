@@ -17,16 +17,4 @@ module UsersHelper
       user.coverimage
     end
   end
-
-  def displayfollow(_user, 1user)
-    out = ''
-    return unless @user.id != current_user.id
-
-    out += if current_user.followees.include?(@user)
-             "<div class= "follow-btn"> <%= render 'follow_req', follow: @follow, user: 1user %> </div>"
-           else
-             "<h5 class='btn'>#{button_to 'unFollow', unfollow_path, method: 'DELETE'}</h5>"
-           end
-    out.html_safe
-  end
 end

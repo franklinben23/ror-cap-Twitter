@@ -1,17 +1,33 @@
 <div>
   <div>
-    <div>
+    <div class= "imgs-container">
+      <image class="profile-image"<%= image_tag display_photo(@user) %>
       <image class="cover-image"<%= image_tag display_cover(@user) %>
     </div>
 
     <% unless @user.id == current_user.id && current_user.followed_users.include?(@user) %>
       <div class= "follow-btn">
-        <%= displayfollow(_user, @user) %> 
+        <% if current_user.id != @user.id && !current_user.followees.include?(@user) %>
+          <%= render 'follow_req', follow: @follow, user: @user %>
+        <% elsif current_user.id != @user.id && current_user.followees.include?(@user) %>
+          <%= link_to "unfollow", follow_path(@user.id), method: :delete, class: "unfollow-btn" %>
+        <% end %>
       </div>
     <% end %>
-    <h3>See <u>@<%= @user.username %></u> thoughts:</h3><br>
 
-  <ul>
+    <div class ="follow-counts d-flex justify-content-around">
+        <div class= "following">
+          <p class= "follow-count-label"> Following <p>
+          <p class= "follow-count"> <%= current_user.followees.count %> </p>
+        </div>
+        <div class= "followers">
+          <p class= "follow-count-label"> Followers <p>
+          <p class= "follow-count"> <%= current_user.followers.count %> </p>
+        </div>
+      </div>
+    <h3 class= "user">See <u>@<%= @user.username %></u> thoughts:</h3><br>
+
+  <ul class= "tweet-list">
     <% @user_tweets.each do | tweet | %>
       <li><%= tweet.body %> <br> 
       <small>Tweeted at <%= tweet.created_at %></small></li><br>

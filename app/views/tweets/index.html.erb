@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Tweets</h1>
 
@@ -13,7 +13,7 @@
         <p class= "fullname-n"> <% tweet.user.fullname %> </p>
       </div>
     </div>
-    <% link_to tweet_path(tweet) %>
+    <%= link_to tweet_path(tweet) do %>
       <div class= "body">
         <%= tweet.body %>
       </div>

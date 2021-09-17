@@ -25,13 +25,30 @@ body {
   width: 77.5%;
   margin: auto;
 }
-/*.conti {
-  min-height: 100vh;
-}*/
 
 .sidebar-nav {
   width: 27%;
   color: #eee;
+}
+
+.sidebar-img {
+  height: 50px;
+  width: 50px;
+}
+
+.following,
+.followers {
+  border: solid 0.5px white;
+  width: 50%;
+}
+
+.follow-count,
+.follow-count-label {
+  padding-left: 25px;
+}
+
+.user-name {
+  padding-right: 10px;
 }
 
 .navbar {

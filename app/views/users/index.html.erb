@@ -1,17 +1,23 @@
+<h3 class= "user"><u>List of Users: </u></h3><br>
+
 <% @users.each do |user| %>
-  <div class= "d-flex">
+  <div class= "d-flex justify-content-center conte">
     <div class= "users-pic">
-      <%= image_tag display_photo(user), class: "user-pic" %>
+      <%= image_tag display_photo(user), class: "profiles-image" %>
     </div>
-    <div class= "user-links">
-      <%= link_to users_show_path(user.id) do %>
+    <div class= "user-links align-content-center">
+      <%= link_to show_user_path(user.id) do %>
         <strong><%= user.fullname %></strong> | 
         <small>@<%= user.username %></small><br>
         <%= user.email %><br><br>
       <% end %>
     </div>
     <div class= "follow-btn">
-      <%= <%= displayfollow(_user, user) %>%> 
+      <% if current_user.id != user.id && !current_user.followees.include?(user) %>
+        <%= render 'follow_req', follow: @follow, user: user %>
+      <% elsif current_user.id != user.id && current_user.followees.include?(user) %>
+        <%= link_to "unfollow", follow_path(user.id), method: :delete, class: "unfollow-btn" %>
+      <% end %>
     </div>
   </div>
 <% end %>
