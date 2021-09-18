@@ -1,24 +1,97 @@
-# README
+# Rails capstone project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Capstone project for rails.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby v2.7.0
+- Ruby on Rails v5.2.4
 
-* System dependencies
+## Live Demo
 
-* Configuration
+ror-casptone-franklin.herokuapp.com
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy and run this repository, follow these simple example steps:
 
-* How to run the test suite
+    Open your terminal and go to the directory where you want to clone the repository.
 
-* Services (job queues, cache servers, search engines, etc.)
+    Download/clone this repository GitHub Repository on your computer: type git clone https://github.com/franklinben23/ror-social-scaffold.
 
-* Deployment instructions
+    Still in your terminal, use the command cd to go to the place where you saved/cloned the repository. For example: Desktop/User/ror-capstoneproject/. You may use the command ls to see the files and repositories existent in your current location.
 
-* ...
+    Install the necessary gems to run the project: type bundle install and then yarn install.
+
+    Now, please run these commands rails db:create and rails db:migrate to run all the migration for the database and have all tables updated and ready to use.
+
+Now your environment is ready to run the project! Type rails s, open your browser and type localhost:3000.
+
+### Prerequisites
+
+Ruby: 2.6.3
+Rails: 5.2.3
+Postgres: >=9.5
+
+### Setup
+
+Instal gems with:
+
+```
+bundle install
+```
+
+Setup database with:
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+
+### Run tests
+
+```
+    rspec --format documentation
+```
+
+> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+
+### Deployment
+
+TBA
+
+## Author
+
+**Franklin benjamin crisostomo de la rosa**
+
+- GitHub: [@franklinben23](https://github.com/franklinben23)
+- Twitter: [@frankli2302](https://twitter.com/Frankli2302)
+- LinkedIn: [Franklin Benjamin](https://www.linkedin.com/in/franklinbenjamin/)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+TBA
+
+## 📝 License
+
+TBA
