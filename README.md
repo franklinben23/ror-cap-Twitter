@@ -2,6 +2,22 @@
 
 > Capstone project for rails.
 
+## Explanation
+
+This is social media desktop application intented to reproduce the rough functionalities of a twiiter style of app.
+
+Users can create accounts by typing their names and e-mails. they also get to choose an unique username that can only be accesed by them.
+
+When Logged in they can create their own messages and share with the rest of the users, those will appear in the index.
+
+The user can also visit other users' profiles and see their tweets and basic stats.
+
+There is also a section called "Who to follow", this will show a list of users recommended to the user in question, and the user can follow them, when you follow an user their tweets come first in the index **not implemented in this iteration**.
+
+On the left side there is a section called the sidenav, this will show a picture of you along with other stats, like the people you are following and the ones following you, this is also where you find basic nav links.
+
+The feature that I chose to implement in this initial iteration of the app was the one of adding avatar pictures to each user to ease the recognition and to make the experience more complete, also cover images to decorate profile pages. This was done using active storage.
+
 ## Built With
 
 - Ruby v2.7.0
