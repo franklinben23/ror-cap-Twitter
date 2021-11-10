@@ -11,12 +11,14 @@
     </div>
   <% end %>
 
+  <h4>Say what is on your mind:</h4><br>
+
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.label 'Tweet', hidden: true %>
+    <%= form.text_area :body, :rows=>5, :cols=>50, placeholder: "What's on your mind?", required: true, autofocus: true, class: 'new-opinion-input', id: 'opiniontext' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
-  </div>
+  </div><br>
 <% end %>

@@ -8,9 +8,9 @@
     <% unless @user.id == current_user.id && current_user.followed_users.include?(@user) %>
       <div class= "follow-btn">
         <% if current_user.id != @user.id && !current_user.followees.include?(@user) %>
-          <%= render 'follow_req', follow: @follow, user: @user %>
+          <%= button_to 'Follow', follow_path, method: 'POST' %>
         <% elsif current_user.id != @user.id && current_user.followees.include?(@user) %>
-          <%= link_to "unfollow", follow_path(@user.id), method: :delete, class: "unfollow-btn" %>
+          <%= button_to 'Unfollow', unfollow_path, method: 'POST' %>
         <% end %>
       </div>
     <% end %>

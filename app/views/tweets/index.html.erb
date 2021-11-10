@@ -1,23 +1,24 @@
+<h1>Tweets</h1><br>
 
+<%= render 'form', tweet: @tweet %>
 
-<h1 class= "index-title">Tweets</h1>
-
-<% @tweets.each do |tweet| %>
-  <div class= "pic-and-body d-flex align-content-center w-100">
-    <div class = "pic-and-names d-flex justify-content-center align-content-center">
-      <div class= "pic">
-        <%= image_tag display_photo(tweet.user), class: "tweet-pic" %>
-      </div>
-      <div class= "names d-flex">
-        <p class= "username-n"><bold> <%= tweet.user.username %></bold> </p>
-      </div>
+<ul class="list-unstyled">
+  <% @tweets.each do | tweet | %>
+    <div class="panel panel-default">
+      <li class="panel-heading">
+        <image class="tweet-pic"<%= image_tag display_photo(tweet.user) %>
+        <%= tweet.user.fullname %>
+        <small>@<%= tweet.user.username %></small>
+        <small class="text-right"> | 
+        <%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %b %Y") %>
+        </small>
+        <li class="panel-body"><%= tweet.body %></li>
+        <% if false %>
+          <div class='post-liking text-right mx-2'>
+            <%= like_or_dislike_btn(opinion, @like) %>
+          </div>
+        <% end %>
+      </li>
     </div>
-    <%= link_to tweet_path(tweet) do %>
-      <div class= "tweet-body">
-        <%= tweet.body %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
-<%= link_to 'New Tweet', new_tweet_path, class: "new_tweet_btn" %>
+  <% end %>
+</ul>

@@ -1,0 +1,47 @@
+@import "fonts";
+
+body {
+  font-family: Acumin Pro;
+}
+
+.sidebar {
+  z-index: 10;
+  padding-top: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  flex-direction: column;
+  background-color: #213346;
+  color: #fff;
+  font-family: Acumin Pro;
+}
+
+.sidebar a {
+  color: #fff;
+  font-family: Acumin Pro;
+}
+
+.sidebar-listings {
+  padding-top: 50px;
+  .sidebar-list-item {
+    padding: 10px;
+    font-size: 20px;
+    list-style: none;
+  }
+}
+
+.content {
+  padding: 30px 10px 0 0;
+  margin-left: -30px;
+  height: 90%;
+}
+
+.who-sec {
+  margin-left: 300px;
+}
+
+.navbar-logo {
+  margin-left: 150px;
+}

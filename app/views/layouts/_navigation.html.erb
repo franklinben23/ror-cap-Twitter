@@ -1,0 +1,19 @@
+<div class= "main-sec w-100">
+  <div class = "navbar d-flex">
+    <div class = "navbar-logo">
+      <%= link_to root_path do %>
+        <i class="fa fa-twitter fa-2x element d-block" aria-hidden="true"></i>
+      <% end %>
+    </div>
+    <div class = "navbar-elements d-flex">
+      <%= link_to new_tweet_path do %>
+        <i class="fa fa-pencil element d-block" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to destroy_user_session_path do %>
+        <i class="fa fa-sign-out element d-block" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to edit_user_registration_path do %>
+        <i class="fa fa-address-book element d-block" aria-hidden="true"></i>
+      <% end %>
+    </div>
+  </div>
