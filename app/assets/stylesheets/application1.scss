@@ -11,16 +11,21 @@
   flex-direction: column;
   background-color: #213346;
   color: #fff;
+  /* stylelint-disable */
   font-family: Acumin Pro;
+  /* stylelint-enable */
 }
 
 .sidebar a {
   color: #fff;
+  /* stylelint-disable */
   font-family: Acumin Pro;
+  /* stylelint-enable */
 }
 
 .sidebar-listings {
   padding-top: 50px;
+
   .sidebar-list-item {
     padding: 10px;
     font-size: 20px;
