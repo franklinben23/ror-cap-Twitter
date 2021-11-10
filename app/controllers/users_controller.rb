@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     @follow = Follow.new
   end
 
-
   def follow
     @user = User.find(params[:id])
     current_user.followees << @user
