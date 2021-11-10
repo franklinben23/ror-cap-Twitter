@@ -25,7 +25,7 @@ The feature that I chose to implement in this initial iteration of the app was t
 
 ## Live Demo
 
-ror-casptone-franklin.herokuapp.com
+https://ror-cap-twitt.herokuapp.com
 
 ## Getting Started
 
