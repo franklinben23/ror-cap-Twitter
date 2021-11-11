@@ -2,6 +2,9 @@
 
 > Capstone project for rails.
 
+## screenshot
+![Screenshot 2021-11-10 at 18-09-25 RorCapTwitter](https://user-images.githubusercontent.com/68623189/141208223-29ebb264-e560-4357-b454-029272c7c6ca.png)
+
 ## Explanation
 
 This is social media desktop application intented to reproduce the rough functionalities of a twiiter style of app.
