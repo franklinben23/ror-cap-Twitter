@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   def index
     @users = User.all.order(created_at: :desc)
     @user = User.where(id: current_user).includes(:followees, :followers)
-    @user.photo.attach(params[:photo])
     @follow = Follow.new
     @following = current_user.followers.pluck(:followee_id)
   end
