@@ -3,6 +3,7 @@
 > Capstone project for rails.
 
 ## screenshot
+
 ![Screenshot 2021-11-10 at 18-09-25 RorCapTwitter](https://user-images.githubusercontent.com/68623189/141208223-29ebb264-e560-4357-b454-029272c7c6ca.png)
 
 ## Explanation
@@ -28,7 +29,7 @@ The feature that I chose to implement in this initial iteration of the app was t
 
 ## Live Demo
 
-https://ror-cap-twitt.herokuapp.com
+https://flamboyant-shaw-7e890c.netlify.app
 
 ## Getting Started
 
