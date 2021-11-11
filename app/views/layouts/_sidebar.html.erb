@@ -1,0 +1,33 @@
+<% if user_signed_in? %>
+    <div>
+      <div class="name-pic d-flex p-3 align-items-center justify-content-between">
+        <div> <%= image_tag display_photo_main(current_user), class:"sidebar-img" %> </div>
+        <div class= "user-name"> <%= current_user.fullname.capitalize %> </div>
+      </div>
+
+      <div class ="follow-counts d-flex justify-content-around">
+        <div class= "following">
+          <p class= "follow-count-label"> Following <p>
+          <p class= "follow-count"> <%= current_user.followees.count %> </p>
+        </div>
+        <div class= "followers">
+          <p class= "follow-count-label"> Followers <p>
+          <p class= "follow-count"> <%= current_user.followers.count %> </p>
+        </div>
+      </div>
+
+      <div class= "sidebar-listings">
+        <ul class= "sidebar-list">
+          <li class= "sidebar-list-item">
+            <%= link_to "Connect", users_path %>
+          </li>
+          <li class= "sidebar-list-item">
+            <%= link_to "Home", root_path %>
+          </li>
+          <li class= "sidebar-list-item">
+            <%= link_to "Profile", show_user_path(current_user) %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
