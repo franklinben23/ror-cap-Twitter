@@ -1,0 +1,25 @@
+<h3 class= "user"><u>List of Users: </u></h3><br>
+
+<% @users.each do |user| %>
+  <div class= "d-flex justify-content-center conte">
+    <div class= "users-pic">
+      <%= image_tag display_photo(user), class: "profiles-image" %>
+    </div>
+    <div class= "user-links align-content-center">
+      <%= link_to show_user_path(user.id) do %>
+        <strong><%= user.fullname %></strong> | 
+        <small>@<%= user.username %></small><br>
+        <%= user.email %><br><br>
+      <% end %>
+    </div>
+    <div class= "follow-btn">
+      <% unless user.id == current_user.id && current_user.followed_users.include?(user) %>
+        <% if current_user.id != user.id && !current_user.followees.include?(user) %>
+          <%= button_to 'Follow', follow_path(user), method: 'POST' %>
+        <% elsif current_user.id != user.id && current_user.followees.include?(user) %>
+          <%= button_to 'Unfollow', unfollow_path(user), method: 'POST' %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

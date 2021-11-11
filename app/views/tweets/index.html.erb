@@ -1,0 +1,24 @@
+<h1>Tweets</h1><br>
+
+<%= render 'form', tweet: @tweet %>
+
+<ul class="list-unstyled">
+  <% @tweets.each do | tweet | %>
+    <div class="panel panel-default panelito">
+      <li class="panel-heading">
+        <image class="tweet-pic"<%= image_tag display_photo(tweet.user) %>
+        <%= tweet.user.fullname %>
+        <small>@<%= tweet.user.username %></small>
+        <small class="text-right"> | 
+        <%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %b %Y") %>
+        </small>
+        <li class="panel-body panelito-body"><%= tweet.body %></li>
+        <% if false %>
+          <div class='post-liking text-right mx-2'>
+            <%= like_or_dislike_btn(opinion, @like) %>
+          </div>
+        <% end %>
+      </li>
+    </div>
+  <% end %>
+</ul>

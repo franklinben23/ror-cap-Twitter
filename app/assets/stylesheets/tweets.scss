@@ -1,0 +1,31 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.tweet-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.tweet-body {
+  max-width: 400px;
+  padding-top: 23px;
+}
+
+.index-title,
+.pic-and-body,
+.new_tweet_btn {
+  margin-left: 33%;
+}
+
+.index-title {
+  padding-top: 20px;
+}
+
+.pic-and-names {
+  padding: 10px;
+}
+
+.username-n {
+  padding-top: 17px;
+}
