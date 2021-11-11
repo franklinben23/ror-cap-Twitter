@@ -4,7 +4,7 @@
 
 <ul class="list-unstyled">
   <% @tweets.each do | tweet | %>
-    <div class="panel panel-default">
+    <div class="panel panel-default panelito">
       <li class="panel-heading">
         <image class="tweet-pic"<%= image_tag display_photo(tweet.user) %>
         <%= tweet.user.fullname %>
@@ -12,7 +12,7 @@
         <small class="text-right"> | 
         <%= tweet.created_at.strftime("#{tweet.created_at.day.ordinalize} %b %Y") %>
         </small>
-        <li class="panel-body"><%= tweet.body %></li>
+        <li class="panel-body panelito-body"><%= tweet.body %></li>
         <% if false %>
           <div class='post-liking text-right mx-2'>
             <%= like_or_dislike_btn(opinion, @like) %>

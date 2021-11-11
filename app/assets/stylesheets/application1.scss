@@ -40,9 +40,38 @@
 }
 
 .who-sec {
-  margin-left: 300px;
+  margin-left: 150px;
 }
 
 .navbar-logo {
   margin-left: 150px;
+}
+
+.center,
+.right {
+  height: 100vh;
+  border: 1px solid lightgrey;
+  box-shadow: 0.7px 0.7px 0.7px 0.7px lightgrey;
+  background-color: white;
+}
+
+.pen1 {
+  padding: 40px;
+}
+
+.pen {
+  padding: 70px 70px 45px 45px;
+}
+
+.panelito {
+  border: lightgray solid 0.6px;
+  margin-bottom: 10px;
+}
+
+.panelito-body {
+  background-color: rgb(238, 238, 238);
+}
+
+.panel-heading {
+  background-color: rgb(226, 226, 226);
 }
