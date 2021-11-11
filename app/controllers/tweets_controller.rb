@@ -8,13 +8,11 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all.includes(:user).order(created_at: :desc)
     @like = Like.new
     @tweet = Tweet.new
-    @following = current_user.followers.pluck(:followee_id)
   end
 
   # GET /tweets/1 or /tweets/1.json
   def show
     @tweet = Tweet.find(params[:id])
-    @following = current_user.followers.pluck(:followee_id)
   end
 
   # GET /tweets/new
